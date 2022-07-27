@@ -136,11 +136,14 @@ body {
     background: rgba(black, .5);
     height: 100%;
     visibility: hidden;
-    
-    .box {
+
+    .book-form {
         box-shadow: 0 3px 10px rgb(0 0 0 / 40%);
         width: fit-content;
         background: white;
+        opacity: 0;
+        transition: .3s ease-in-out;
+        transform: translateY(-2em);
         
         .book-exit {
             img {

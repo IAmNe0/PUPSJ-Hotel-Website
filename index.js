@@ -45,17 +45,24 @@ const btnBook = document.getElementById('book-btn')
       sectionBook = document.getElementById('book-section')
       formBook = document.getElementById('book-form');
 
+      function showBook(opacity, transform) {
+        formBook.style.opacity = opacity;
+        formBook.style.transform = transform;
+      }
       btnBook.addEventListener("click", () => {
         sectionBook.style.visibility = "visible";
+        showBook("1", "translateY(0)");
       })
 
       btnBookExit.addEventListener("click", () => {
         sectionBook.style.visibility = "hidden";
+        showBook("0", "translateY(-2em)");
       })
 
       document.addEventListener('mouseup', function(e) {
         if (!formBook.contains(e.target)) {
           sectionBook.style.visibility = "hidden";
+          showBook("0", "translateY(-2em)");
         }
     });
 /*--------------------------------------------------------------*/

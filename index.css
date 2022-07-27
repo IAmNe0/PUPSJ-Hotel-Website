@@ -127,28 +127,31 @@ body {
   height: 100%;
   visibility: hidden;
 }
-.book .box {
+.book .book-form {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background: white;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-2em);
 }
-.book .box .book-exit img {
+.book .book-form .book-exit img {
   height: 20px;
   opacity: 0.5;
   margin: 0.5em;
   cursor: pointer;
 }
-.book .box form label {
+.book .book-form form label {
   font-weight: bold;
   font-size: 1.3em;
   line-height: 0.8em;
 }
-.book .box form .check-in, .book .box form .check-out {
+.book .book-form form .check-in, .book .book-form form .check-out {
   position: relative;
 }
-.book .box form .check-in input[type=date], .book .box form .check-out input[type=date] {
+.book .book-form form .check-in input[type=date], .book .book-form form .check-out input[type=date] {
   text-align: center;
   border: 1px solid #ccc;
   font-size: 1.3em;
@@ -156,38 +159,38 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-.book .box form .check-in input[type=date]::-webkit-calendar-picker-indicator, .book .box form .check-out input[type=date]::-webkit-calendar-picker-indicator {
+.book .book-form form .check-in input[type=date]::-webkit-calendar-picker-indicator, .book .book-form form .check-out input[type=date]::-webkit-calendar-picker-indicator {
   background: transparent;
   cursor: pointer;
   position: absolute;
   width: 100px;
 }
-.book .box form .quantity {
+.book .book-form form .quantity {
   border: 1px solid #ccc;
   font-size: 1.3em;
 }
-.book .box form .quantity .input-number::-webkit-outer-spin-button,
-.book .box form .quantity .input-number::-webkit-inner-spin-button {
+.book .book-form form .quantity .input-number::-webkit-outer-spin-button,
+.book .book-form form .quantity .input-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.book .box form .quantity .input-number {
+.book .book-form form .quantity .input-number {
   text-align: center;
   outline: none;
   border: none;
   background: transparent;
   width: 1.6em;
 }
-.book .box form .quantity .input-number-decrement,
-.book .box form .quantity .input-number-increment {
+.book .book-form form .quantity .input-number-decrement,
+.book .book-form form .quantity .input-number-increment {
   background: #f1f1f1;
   color: #444;
   font-weight: bold;
   cursor: pointer;
   padding: 0 10px;
 }
-.book .box form .quantity .input-number-decrement:active,
-.book .box form .quantity .input-number-increment:active {
+.book .book-form form .quantity .input-number-decrement:active,
+.book .book-form form .quantity .input-number-increment:active {
   background: #ddd;
 }
 
