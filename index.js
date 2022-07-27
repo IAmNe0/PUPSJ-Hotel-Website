@@ -47,21 +47,15 @@ const btnBook = document.getElementById('book-btn')
 
       btnBook.addEventListener("click", () => {
         sectionBook.style.visibility = "visible";
-        if(scWidth < 768)
-          body.style.overflowY = 'hidden';
       })
 
       btnBookExit.addEventListener("click", () => {
         sectionBook.style.visibility = "hidden";
-        if(scWidth < 768)
-          body.style.overflowY = 'scroll';
       })
 
       document.addEventListener('mouseup', function(e) {
         if (!formBook.contains(e.target)) {
           sectionBook.style.visibility = "hidden";
-          if(scWidth < 768)
-            body.style.overflowY = 'scroll';
         }
     });
 /*--------------------------------------------------------------*/
