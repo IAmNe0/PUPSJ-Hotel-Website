@@ -1,0 +1,680 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=Poppins:wght@500;700&display=swap");
+:root {
+  --header: #D4AF37;
+}
+
+body {
+  font-family: "Cormorant SC", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: var(--header);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--header);
+}
+
+.hero {
+  height: 78vh;
+  background: url("images/homep.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero .navbar {
+  background: #6c757d;
+  border: 1px solid white;
+}
+.hero .navbar span {
+  font-weight: bold;
+}
+.hero .navbar img {
+  cursor: pointer;
+}
+.hero .navbar .mobile-account {
+  height: 30px;
+}
+.hero .navbar .mobile-menu {
+  height: 25px;
+}
+.hero .booknow {
+  margin-top: 30vh;
+  transition: 0.3s ease-in-out;
+}
+.hero .booknow nav {
+  position: fixed;
+  z-index: 5;
+  background: white;
+  height: 100%;
+  width: 85vw;
+  top: 0;
+  left: -85vw;
+  color: white;
+  text-align: left;
+  transition: left 0.4s ease-in-out;
+}
+.hero .booknow nav ul {
+  list-style: none;
+  padding: 0;
+}
+.hero .booknow nav ul li {
+  padding: 1.2vh 1vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.hero .booknow nav ul li a {
+  font-size: 1.3em;
+  color: #282828;
+  text-decoration: none;
+}
+.hero .booknow nav img {
+  cursor: pointer;
+  height: 16px;
+}
+.hero .booknow .show {
+  left: 0;
+}
+.hero .booknow .cover {
+  z-index: 3;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.hero .booknow .btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  width: 34vw;
+  padding: 0.4em 0;
+  font-size: 1.1em;
+  transition: width 0.3s ease-in-out;
+}
+.hero .booknow-top {
+  margin-top: -0.1vh;
+  transition: 0.3s ease-in-out;
+}
+.hero .booknow-top .btn {
+  transition: width 0.3s ease-in-out;
+  padding: 10px;
+  width: 100%;
+  background: #6c757d;
+  position: relative;
+}
+.hero .booknow-top .btn::after {
+  background-image: url("/images/calendar.png");
+  background-size: cover;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 11px;
+  margin-left: 5px;
+  content: "";
+}
+.hero .booknow-top .btn:hover {
+  color: white;
+}
+.hero .container {
+  padding-top: 18vh;
+}
+.hero .container h1 {
+  font-size: 9vw;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.book {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  visibility: hidden;
+}
+.book .box {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: white;
+}
+.book .box .book-exit img {
+  height: 20px;
+  opacity: 0.5;
+  margin: 0.5em;
+}
+.book .box form label {
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 0.8em;
+}
+.book .box form .check-in, .book .box form .check-out {
+  position: relative;
+}
+.book .box form .check-in input[type=date], .book .box form .check-out input[type=date] {
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 1.3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.book .box form .check-in input[type=date]::-webkit-calendar-picker-indicator, .book .box form .check-out input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+}
+.book .box form .quantity {
+  border: 1px solid #ccc;
+  font-size: 1.3em;
+}
+.book .box form .quantity .input-number::-webkit-outer-spin-button,
+.book .box form .quantity .input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.book .box form .quantity .input-number {
+  text-align: center;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 1.6em;
+}
+.book .box form .quantity .input-number-decrement,
+.book .box form .quantity .input-number-increment {
+  background: #f1f1f1;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.book .box form .quantity .input-number-decrement:active,
+.book .box form .quantity .input-number-increment:active {
+  background: #ddd;
+}
+
+.description .container-fluid {
+  padding: 5vh 1.5vh;
+}
+.description .container-fluid h1 {
+  color: var(--header);
+  text-transform: uppercase;
+  margin-bottom: 3.5vh;
+}
+.description .container-fluid p {
+  font-size: 1.1em;
+}
+
+.amenities {
+  background: #e9e9e9;
+  padding: 6vh 0 8vh 0;
+}
+.amenities .container h1 {
+  font-size: 2.8em;
+  color: var(--header);
+  margin-bottom: 5vh;
+}
+.amenities .container .row img {
+  width: 5em;
+  opacity: 0.65;
+}
+.amenities .container .row h2 {
+  font-size: 1.1em;
+}
+@media (min-width: 960px) {
+  .amenities .container .row .col-lg-5 {
+    width: 20%;
+  }
+}
+.amenities .container .row .btn {
+  position: relative;
+  color: #6c757d;
+  background: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.amenities .container .row .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.amenities .container .row .btn::after {
+  content: "↓";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  right: 20px;
+  transition: 0.1s ease-in-out;
+}
+.amenities .container .row .btn-rotate::after {
+  transform: rotate(180deg);
+  top: 29px;
+  right: 15px;
+}
+
+.location .header {
+  color: #6c757d;
+}
+.location .details {
+  background: #f6f6f6;
+  font-family: sans-serif;
+  padding: 0;
+}
+.location .details iframe {
+  width: 100%;
+  height: 300px;
+}
+.location .details h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+  color: #5a5a5a;
+}
+.location .details p {
+  font-size: 0.9em;
+  margin: 1vh 0;
+  color: #7d6a55;
+}
+
+.rooms h1 {
+  color: #bd213e;
+  margin: 6vh 0 9vh 0;
+}
+.rooms .main img {
+  width: 100%;
+  height: 75vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rooms .room1 {
+  display: none;
+}
+.rooms p {
+  font-size: 1.1em;
+}
+
+.hotel {
+  padding-top: 5vh;
+}
+.hotel h1 {
+  color: var(--header);
+  position: relative;
+}
+.hotel h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 65px;
+  left: 0;
+  background: var(--header);
+}
+.hotel .row .col-12 {
+  margin-bottom: 1vh;
+}
+.hotel .row .col-12 .collapse {
+  position: relative;
+}
+.hotel .row .col-12 .collapse .card {
+  border: none;
+  padding: 2vh 0;
+}
+.hotel .row .col-12 .collapse .card img {
+  height: 15em;
+}
+.hotel .row .col-12 .collapse .card .pool {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.hotel .row .col-12 .collapse .card p {
+  padding: 1.5vh;
+}
+.hotel .row .col-12 .collapse::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  left: 12px;
+  bottom: -5px;
+  background: #666666;
+}
+.hotel .row .btn {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+  width: 100%;
+  border-radius: 0;
+  background: none;
+  color: #7d6a55;
+  border: none;
+  position: relative;
+}
+.hotel .row .btn::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  bottom: 0;
+  background: #666666;
+}
+.hotel .row .btn::after {
+  content: "▼";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  right: 30px;
+  transition: 0.1s ease-in-out;
+}
+.hotel .row .btn-rotate::after {
+  transform: rotate(180deg);
+  top: 30px;
+  right: 15px;
+}
+.hotel .row .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.reviews .header {
+  color: #bd213e;
+}
+.reviews .row img {
+  width: 100%;
+  height: 25vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .reviews .row .col-md-5 {
+    width: 20%;
+  }
+}
+.reviews .rating .checked {
+  color: #ffb612;
+}
+.reviews .review-header h1 {
+  color: #bd213e;
+  font-size: 1.4em;
+}
+.reviews .review-header p {
+  color: gray;
+}
+.reviews .review {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+footer {
+  margin-top: 20vh;
+}
+footer .pages {
+  background: #282828;
+  border-top: 20px solid #b6b6b6;
+}
+footer .pages .logo h1 {
+  font-size: 1em;
+}
+footer .pages a {
+  display: block;
+  text-decoration: none;
+  color: lightgray;
+}
+footer .pages .socials h1 {
+  color: lightgray;
+}
+footer .pages .socials img {
+  margin: 5px;
+  height: 5vh;
+  border-radius: 11px;
+}
+footer .credit {
+  background: black;
+}
+footer .credit h1 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.6em;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .booknow {
+    margin-top: 40vh;
+  }
+  .hero .booknow .btn {
+    width: 25vw;
+  }
+  .hero .booknow nav {
+    width: 62vw;
+  }
+  .hero .booknow-top {
+    margin-top: -0.1vh;
+  }
+  .hero .booknow-top .btn {
+    width: 100%;
+  }
+  .description .container-fluid {
+    height: 42vw;
+  }
+  .amenities #collapseAmenities {
+    display: contents;
+  }
+  .amenities #amenities-btn {
+    display: none;
+  }
+  .rooms h1 {
+    margin: 6vw 0 7vw 0;
+  }
+  .rooms .main img {
+    content: url("images/main-room.jpg");
+    height: 45vw;
+  }
+  .rooms .room1 {
+    display: inline;
+  }
+  .rooms .room1 img {
+    width: 100%;
+  }
+  .rooms button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .hotel h1::before {
+    bottom: 90px;
+  }
+  .hotel .collapse {
+    display: contents;
+  }
+  .hotel .collapse img {
+    margin: 0 1.5vh;
+  }
+  .hotel .collapse h2 {
+    font-weight: bold;
+    margin: 1.5vh 0 0 1.5vh;
+    color: #6c757d;
+  }
+  .hotel .collapse .col-md-5 {
+    width: 47%;
+  }
+  .hotel .collapse::after {
+    display: none;
+  }
+  .hotel button {
+    display: none;
+  }
+  .reviews .row img {
+    height: 20vw;
+  }
+  .reviews .row .review-header h1 {
+    font-size: 1.3em;
+  }
+  .reviews .row .review p {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero .booknow .btn {
+    transition: 0.3s ease-in-out;
+    width: 18vw;
+  }
+  .hero .booknow nav {
+    width: 35vw;
+  }
+  .hero .booknow-top .btn {
+    transition: 0.3s ease-in-out;
+    transform: translate(32.5vw, -54px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .hero .booknow-top .btn::after {
+    content: none;
+  }
+  .hero .container h1 {
+    font-size: 6vw;
+  }
+  .description .container-fluid {
+    height: auto;
+  }
+  .location .details iframe {
+    height: 450px;
+  }
+  .rooms p {
+    font-size: 1.2em;
+  }
+  .rooms .main img {
+    height: 35vw;
+  }
+  .rooms .room2 {
+    height: 85vh;
+    position: relative;
+  }
+  .rooms .room2 .img1 {
+    position: absolute;
+    top: -6vh;
+    margin-right: 3vw;
+  }
+  .rooms .room2 .img1 img {
+    width: 105%;
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+  }
+  .rooms .room2 .img2 {
+    position: absolute;
+    top: 7vh;
+    margin-right: 32vw;
+  }
+  .rooms .room2 .img2 img {
+    height: 70vh;
+    width: 26vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 40% 0;
+       object-position: 40% 0;
+    position: relative;
+  }
+  .rooms .room2 .shape {
+    position: absolute;
+    left: 12.3vw;
+    background: #dddddd;
+    width: 37vw;
+    height: 60vh;
+  }
+  .hotel .row .col-12 .collapse .card img {
+    height: 70vh;
+  }
+  .hotel .row .col-12 .collapse .card .col-lg-5, .hotel .row .col-12 .collapse .card .col-md-5 {
+    position: absolute;
+    background: white;
+    right: 0;
+    border: 1px solid #dee2e6;
+  }
+  .hotel .row .col-12 .collapse .card .left {
+    left: 0;
+  }
+  .reviews .row .review-header h1 {
+    font-size: 1.5em;
+  }
+  .reviews .row .review p {
+    font-size: 1.1em;
+  }
+  footer a {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero {
+    height: 84vh;
+  }
+  .hero .booknow {
+    margin-top: 38vh;
+  }
+  .hero .booknow .btn {
+    width: 13vw;
+  }
+  .hero .booknow-top {
+    margin-top: -0.1vh;
+  }
+  .hero .booknow-top .btn {
+    transform: translate(34.5vw, -54px);
+  }
+  .hero .container {
+    padding-top: 25vh;
+  }
+  .hero .container h1 {
+    font-size: 4vw;
+  }
+  .description .container-fluid .row p {
+    font-size: 1.3em;
+  }
+  .amenities {
+    padding: 11vh 0 12vh 0;
+  }
+  .amenities .container h1 {
+    margin-bottom: 11vh;
+  }
+  .location .details h1 {
+    font-size: 1.3em;
+  }
+  .location .details p {
+    font-size: 1.1em;
+  }
+  .rooms p {
+    font-size: 1.5em;
+  }
+  .rooms button {
+    font-size: 1.2em;
+  }
+  .rooms .room2 {
+    height: 95vh;
+  }
+  .rooms .room2 .img1 img {
+    height: 70vh;
+  }
+  .rooms .room2 .img2 img {
+    height: 78vh;
+  }
+  .rooms .room2 .shape {
+    height: 70vh;
+  }
+  .reviews .row .review-header h1 {
+    font-size: 1.9em;
+  }
+  .reviews .row .review p {
+    font-size: 1.4em;
+  }
+  footer {
+    margin-top: 30vh;
+  }
+}/*# sourceMappingURL=index.css.map */
