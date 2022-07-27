@@ -114,17 +114,6 @@ body {
                 background: #6c757d;
                 position: relative;
             }
-            .btn::after {
-                background-image: url('/images/calendar.png');
-                background-size: cover;
-                display: inline-block;
-                width: 18px; 
-                height: 18px;
-                position: absolute;
-                top: 11px;
-                margin-left: 5px;
-                content:"";
-            }
             .btn:hover {
                 color: white;
             }
@@ -330,9 +319,6 @@ body {
     .room1 {
         display: none;
     }
-    p{
-        font-size: 1.1em;
-    }
 }
 
 .hotel {
@@ -474,9 +460,19 @@ body {
 
 footer {
     margin-top: 20vh;
+
+    .details {
+        background: #b6b6b6;
+        
+        p{
+            font-size: .8em;
+            line-height: 1em;
+            margin: 0;
+            color: white;
+        }
+    }
     .pages {
         background: #282828;
-        border-top: 20px solid #b6b6b6;
 
         .logo {
         
@@ -645,7 +641,7 @@ footer {
 
             .btn {
                 transition: .3s ease-in-out;
-                transform: translate(32.5vw,-54px);
+                transform: translate(32.5vw,-55px);
                 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             }
             .btn::after {
@@ -770,7 +766,7 @@ footer {
         height: 84vh;
 
         .booknow {
-            margin-top: 38vh;
+            margin-top: 40vh;
 
             .btn {
                 width: 13vw;
@@ -780,7 +776,7 @@ footer {
         .booknow-top {
             margin-top: -.1vh;
             .btn {
-                transform: translate(34.5vw,-54px);
+                transform: translate(34.5vw,-55px);
             }
         }
 
@@ -860,4 +856,24 @@ footer {
     footer {
         margin-top: 30vh;
     }
+}
+
+@media only screen and (min-width: 1900px) {
+    .hero {
+        .booknow {
+            margin-top: 45vh;
+
+            .btn {
+                width: 13vw;
+            }
+        }
+
+        .booknow-top {
+            margin-top: -.1vh;
+            .btn {
+                transform: translate(34.5vw,-55px);
+            }
+        }
+    }
+
 }

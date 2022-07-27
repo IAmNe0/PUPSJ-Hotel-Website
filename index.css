@@ -108,17 +108,6 @@ body {
   background: #6c757d;
   position: relative;
 }
-.hero .booknow-top .btn::after {
-  background-image: url("/images/calendar.png");
-  background-size: cover;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: 11px;
-  margin-left: 5px;
-  content: "";
-}
 .hero .booknow-top .btn:hover {
   color: white;
 }
@@ -298,9 +287,6 @@ body {
 .rooms .room1 {
   display: none;
 }
-.rooms p {
-  font-size: 1.1em;
-}
 
 .hotel {
   padding-top: 5vh;
@@ -416,9 +402,17 @@ body {
 footer {
   margin-top: 20vh;
 }
+footer .details {
+  background: #b6b6b6;
+}
+footer .details p {
+  font-size: 0.8em;
+  line-height: 1em;
+  margin: 0;
+  color: white;
+}
 footer .pages {
   background: #282828;
-  border-top: 20px solid #b6b6b6;
 }
 footer .pages .logo h1 {
   font-size: 1em;
@@ -529,7 +523,7 @@ footer .credit h1 {
   }
   .hero .booknow-top .btn {
     transition: 0.3s ease-in-out;
-    transform: translate(32.5vw, -54px);
+    transform: translate(32.5vw, -55px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   .hero .booknow-top .btn::after {
@@ -614,7 +608,7 @@ footer .credit h1 {
     height: 84vh;
   }
   .hero .booknow {
-    margin-top: 38vh;
+    margin-top: 40vh;
   }
   .hero .booknow .btn {
     width: 13vw;
@@ -623,7 +617,7 @@ footer .credit h1 {
     margin-top: -0.1vh;
   }
   .hero .booknow-top .btn {
-    transform: translate(34.5vw, -54px);
+    transform: translate(34.5vw, -55px);
   }
   .hero .container {
     padding-top: 25vh;
@@ -672,5 +666,19 @@ footer .credit h1 {
   }
   footer {
     margin-top: 30vh;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .hero .booknow {
+    margin-top: 45vh;
+  }
+  .hero .booknow .btn {
+    width: 13vw;
+  }
+  .hero .booknow-top {
+    margin-top: -0.1vh;
+  }
+  .hero .booknow-top .btn {
+    transform: translate(34.5vw, -55px);
   }
 }/*# sourceMappingURL=index.css.map */
