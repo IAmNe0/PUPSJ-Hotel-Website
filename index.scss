@@ -147,6 +147,7 @@ body {
                 height: 20px;
                 opacity: .5;
                 margin: .5em;
+                cursor: pointer;
             }
         }
 
@@ -494,6 +495,7 @@ footer {
                 margin: 5px;
                 height: 5vh;
                 border-radius: 11px;
+                cursor: pointer;
             }
         }
     }
@@ -552,7 +554,7 @@ footer {
     .rooms {
         .main {
             img {
-                content: url("images/main-room.jpg");
+                content: url("images/rooms/main-room.jpg");
                 height: 45vw;
             }
         }

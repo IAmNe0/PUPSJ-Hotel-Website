@@ -138,6 +138,7 @@ body {
   height: 20px;
   opacity: 0.5;
   margin: 0.5em;
+  cursor: pointer;
 }
 .book .box form label {
   font-weight: bold;
@@ -429,6 +430,7 @@ footer .pages .socials img {
   margin: 5px;
   height: 5vh;
   border-radius: 11px;
+  cursor: pointer;
 }
 footer .credit {
   background: black;
@@ -466,7 +468,7 @@ footer .credit h1 {
     display: none;
   }
   .rooms .main img {
-    content: url("images/main-room.jpg");
+    content: url("images/rooms/main-room.jpg");
     height: 45vw;
   }
   .rooms .room1 {
